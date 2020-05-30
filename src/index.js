@@ -3,6 +3,7 @@ const {addMovie} = require('./api.js');
 const {editMovie} = require('./api.js');
 
 getMovies().then((movies) => {
+    $('#movieList').html("");
     renderMovies(movies)
 }).catch((error) => {
     alert('Oh no! Something went wrong.\nCheck the console for details.');
@@ -14,27 +15,20 @@ function renderMovies(movies) {
     movies.forEach(({title, rating, genre}) => {
         html +=
             `<ul> 
-    <li>${title} <br> rating: ${rating} <br> genre: ${genre}</li>
+    <li data-attribute="SOME_ID">${title}  <br>Rating: ${rating} <br>Genre: ${genre}</li><hr>
     </ul>`;
     });
     $('#movieList').html(html);
     $('li').addClass('indMovie');
 }
 
-
-//movie post
-
-function newMovieObject(title, rating, genre) {
-    let userMovieTitle = $('.title').val();
-    let userMovieStars = $('#movieRating').val();
-    let userMovieGenre = $('#movieGenre').val();
-
-    const newMovie = {
-        'title': userMovieTitle,
-        'rating': userMovieStars,
-        'genre': userMovieGenre
+//===========Add movie
+function newMovieObject() {
+    return {
+        'title': $('.title').val(),
+        'rating': $('#movieRating').val(),
+        'genre': $('#movieGenre').val()
     };
-    return newMovie;
 }
 
 $('.addMovieBtn').click(function (e) {
@@ -47,33 +41,38 @@ $('.addMovieBtn').click(function (e) {
 });
 
 
-// edit movie function
-function renderForm(title, rating, genre){
-    let editMovieTitle = movies.title;
-    let editMovieStars = movies.rating;
-    let editMovieGenre = movies.genre;
-
-    $('#movieTitle').innerHTML(editMovieTitle);
-    $('#movieRating').innerHTML(editMovieStars);
-    $('#movieGenre').innerHTML(editMovieGenre);
-}
-
 //click li and console.log title rating genre id
-    //e.target target what was click
-    //jquery select e.target using $(e.target)
-    // traverse the dom to pull out the title, rating, id (if needed, include the id of the          .......us:(maybe reduce)
-        // add the id of the movie using the data attribute like data-id=SOME_ID to an element in the li
+//e.target target what was click
+//jquery select e.target using $(e.target)
+// traverse the dom to pull out the title, rating, genre, id (if needed, include the id of the          .......us:(maybe reduce)
+// add the id of the movie using the data attribute like data-id=SOME_ID to an element in the li
 
 // once you have the title, rating, genre, id create a new movie object and pass that to your editMovie function
+// edit movie function
 
-$("#movieList").on('click','ul',function(e) {
+//==========Edit Movie
+
+//on movie click render form
+function renderForm(arr) {
+    $('#renderTitle').val(arr[0]);
+    $('#renderRating').val(arr[1].split(' ')[1]);
+    $('#renderGenre').val(arr[2].split(' ')[1]);
+}
+
+//on btn click update
+function editMovieBtnC(e){
+    e.preventDefault();
+    obj = {
+
+    }
+}
+
+$("#movieList").on('click', 'ul', function (e) {
     e.preventDefault();
     let target = e.target;
-    console.log($(target));
-    //class list = title
-    // console.log($(target));
-    // console.log(editMovie());
-
+    let targetText = ($(target).text());
+    let movieArray = (targetText.split('  '));
+    return renderForm(movieArray);
 });
 
 
