@@ -14,8 +14,8 @@
     },
     {
       "title": "IT",
-      "rating": "1",
-      "genre": "comedy",
+      "rating": "3",
+      "genre": "horror",
       "id": 3
     },
     {
@@ -26,8 +26,8 @@
     },
     {
       "title": "Wreck It Ralph",
-      "rating": "1",
-      "genre": "comedy",
+      "rating": "5",
+      "genre": "animated",
       "id": 5
     },
     {
@@ -47,12 +47,6 @@
       "rating": "1",
       "genre": "comedy",
       "id": 8
-    },
-    {
-      "title": "The Black Stallion",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 9
     },
     {
       "title": "Moana",
@@ -197,17 +191,6 @@
       "rating": "1",
       "genre": "comedy",
       "id": 33
-    },
-    {
-      "title": "Julia",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 34
-    },
-    {
-      "title": "Shelby",
-      "genre": "comedy",
-      "id": 35
     },
     {
       "title": "George of the Jungle",
