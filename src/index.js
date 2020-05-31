@@ -1,6 +1,7 @@
 const {getMovies} = require('./api.js');
 const {addMovie} = require('./api.js');
 const {editMovie} = require('./api.js');
+const {deleteMovie} = require('./api.js');
 
 getMovies().then((movies) => {
     $('#movieList').html("");
@@ -10,16 +11,15 @@ getMovies().then((movies) => {
     console.log(error);
 });
 
+//=========Render Form
 function renderMovies(movies) {
     let html = '';
-    movies.forEach(({title, rating, genre}) => {
-        html +=
-            `<ul> 
-    <li data-attribute="SOME_ID">${title}  <br>Rating: ${rating} <br>Genre: ${genre}</li><hr>
+    movies.forEach(({title, rating, genre, id}) => {
+        html += `<ul> 
+<li>${title}  <br>Rating: ${rating}  <br>Genre: ${genre}  <br><span style ="display: none;" id='id'>${id}</span></li>
     </ul>`;
     });
     $('#movieList').html(html);
-    $('li').addClass('indMovie');
 }
 
 //===========Add movie
@@ -40,41 +40,47 @@ $('.addMovieBtn').click(function (e) {
     $('#myForm')[0].reset();
 });
 
-
-//click li and console.log title rating genre id
-//e.target target what was click
-//jquery select e.target using $(e.target)
-// traverse the dom to pull out the title, rating, genre, id (if needed, include the id of the          .......us:(maybe reduce)
-// add the id of the movie using the data attribute like data-id=SOME_ID to an element in the li
-
-// once you have the title, rating, genre, id create a new movie object and pass that to your editMovie function
-// edit movie function
-
 //==========Edit Movie
+let movieArr;
 
-//on movie click render form
-function renderForm(arr) {
-    $('#renderTitle').val(arr[0]);
-    $('#renderRating').val(arr[1].split(' ')[1]);
-    $('#renderGenre').val(arr[2].split(' ')[1]);
-}
-
-//on btn click update
-function editMovieBtnC(e){
-    e.preventDefault();
-    obj = {
-
-    }
-}
-
-$("#movieList").on('click', 'ul', function (e) {
+$("#movieList").on('click', 'li', function (e) {
     e.preventDefault();
     let target = e.target;
     let targetText = ($(target).text());
-    let movieArray = (targetText.split('  '));
-    return renderForm(movieArray);
+    movieArr = targetText.split('  ');
+    $('#renderTitle').val(movieArr[0]);
+    $('#renderRating').val(movieArr[1].split(' ')[1]);
+    $('#renderGenre').val(movieArr[2].split(' ')[1]);
 });
 
+function movieObject() {
+    return {
+        'title': $('#renderTitle').val(),
+        'rating': $('#renderRating').val(),
+        'genre': $('#renderGenre').val(),
+        'id': movieArr[3]
+    }
+}
+
+//=======BTN Click Update
+$('#editMovieBtn').click(function (e) {
+    e.preventDefault();
+    editMovie(movieObject());
+    getMovies().then((movies) => {
+        (renderMovies(movies));
+    });
+    $('#myEditForm')[0].reset();
+});
+
+//=======BTN Click Delete
+$('#deleteMovieBtn').click(function (e) {
+    e.preventDefault();
+    deleteMovie(movieObject());
+    getMovies().then((movies) => {
+        (renderMovies(movies));
+    });
+    $('#myEditForm')[0].reset();
+});
 
 
 
