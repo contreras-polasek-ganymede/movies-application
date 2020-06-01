@@ -1,10 +1,10 @@
 html, body {
     height: 30%;
     background-color: black;
-    color:white;
+    color: white;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -16,7 +16,7 @@ html, body {
     justify-content: center;
 }
 
-li:hover{
+li:hover {
     background-color: darkred;
 }
 
@@ -28,7 +28,7 @@ li:hover{
     display: none;
 }
 
-button{
+button {
     background-color: darkred;
     color: white;
 }
@@ -51,9 +51,12 @@ hr {
     background-color: black;
     color: white;
 }
-#movieList::-webkit-scrollbar { width: 0 !important;}
 
-#movieList ul{
+#movieList::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+#movieList ul {
     list-style-type: none;
     justify-self: center;
 }
@@ -65,39 +68,39 @@ hr {
     overflow: hidden;
 }
 
-#movieRating, #renderRating{
+#movieRating, #renderRating {
     background-color: black;
 }
 
-.error{
+.error {
     outline: 4px solid red;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.highlight{
+.highlight {
     background-color: darkred;
 }
 
-.center{
+.center {
     justify-content: center;
 }
 
-.colorBtn{
+.colorBtn {
     background-color: black;
 }
 
-.mainBtn{
+.mainBtn {
     justify-content: center;
 }
 
-.border-left{
+.border-left {
     /*border-left: 20px solid white;*/
     margin-top: -1.8em;
 }
 
-.left{
-  /*float: left;*/
+.left {
+    /*float: left;*/
 }

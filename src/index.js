@@ -12,7 +12,7 @@ getMovies().then((movies) => {
     console.log(error);
 });
 
-//=========Render Form===============================
+//=========Render Movie List===============================
 function renderMovies(movies) {
     let html = '';
     movies.forEach(({title, rating, genre, id}) => {
@@ -30,7 +30,7 @@ function capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-//===========Add movie===========================================
+//===========Add Movie===========================================
 function newMovieObject() {
     let title = capitalizeFirstLetter($('.title').val());
     return {
@@ -85,7 +85,6 @@ $('#editMovieBtn').click(function (e) {
 //=======BTN Click Delete======================================
 $('#deleteMovieBtn').click(function (e) {
     e.preventDefault();
-    // $('.editForm').addClass('hide');
     deleteMovie(movieObject());
     getMovies().then((movies) => {
         (renderMovies(movies));
@@ -98,6 +97,8 @@ $('.editForm').addClass('hide');
 $('.addForm').addClass('hide');
 $('.row').addClass('center');
 
+
+//===Main Add Btn Click
 $('#mainAddBtn').click(function () {
     $('.addForm').removeClass('hide');
     $('#addForm').addClass('border-left');
@@ -109,6 +110,7 @@ $('#mainAddBtn').click(function () {
     $('.hideRow').removeClass('hide');
 });
 
+//===Main Edit Btn Click
 $('#mainEditBtn').click(function () {
     $('.editForm').removeClass('hide');
     $('#editForm').addClass('border-left');
@@ -131,8 +133,6 @@ $('#mainEditBtn').click(function () {
 
 
 
-
-
 // function doubleSpace() {
 //     if ($('#myForm').includes('  ') === true) {
 //         $('.title').addClass('error');
@@ -142,8 +142,6 @@ $('#mainEditBtn').click(function () {
 //         $('#addMovieBtn').prop('disabled', false);
 //     }
 // }
-
-
 
 
 //======Sort=========================================
