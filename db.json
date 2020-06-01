@@ -3,200 +3,50 @@
     {
       "title": "Casablanca",
       "rating": "4",
-      "genre": "romance",
+      "genre": "Romance",
       "id": 1
     },
     {
       "title": "Star Wars: A New Hope",
-      "rating": "5",
-      "genre": "action",
+      "rating": "4",
+      "genre": "Sci-fi",
       "id": 2
     },
     {
-      "title": "IT",
-      "rating": "3",
-      "genre": "horror",
+      "title": "The Descent",
+      "rating": "4",
+      "genre": "Romance",
       "id": 3
     },
     {
-      "title": "Home Alone",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 4
-    },
-    {
-      "title": "Wreck It Ralph",
-      "rating": "5",
-      "genre": "animated",
+      "title": "Finding Nemo",
+      "rating": "4",
+      "genre": "Animated",
       "id": 5
     },
     {
-      "title": "Intersteller",
-      "rating": "1",
-      "genre": "comedy",
+      "title": "IT",
+      "rating": "3",
+      "genre": "Horror",
       "id": 6
     },
     {
-      "title": "That Darn Cat",
-      "rating": "1",
-      "genre": "comedy",
+      "title": "Scary Movie",
+      "rating": "2",
+      "genre": "Comedy",
       "id": 7
     },
     {
-      "title": "Dark Skies",
-      "rating": "1",
-      "genre": "comedy",
+      "title": "Finding Nemo",
+      "rating": "4",
+      "genre": "Animated",
       "id": 8
     },
     {
-      "title": "Moana",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 10
-    },
-    {
-      "title": "Brink",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 11
-    },
-    {
-      "title": "Oliver and Company",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 12
-    },
-    {
-      "title": "Ferngully",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 13
-    },
-    {
-      "title": "Pet Cementary",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 14
-    },
-    {
-      "title": "All Dogs Go To Heaven",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 15
-    },
-    {
-      "title": "Blade Runner 2045",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 16
-    },
-    {
-      "title": "",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 17
-    },
-    {
-      "title": "",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 18
-    },
-    {
-      "title": "Sucker Punch",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 19
-    },
-    {
-      "title": "Intern",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 20
-    },
-    {
-      "title": "Codeup",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 21
-    },
-    {
-      "title": "Scary Movie",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 22
-    },
-    {
-      "title": "Scary Movie 2",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 23
-    },
-    {
-      "title": "Home Alone",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 24
-    },
-    {
-      "title": "Home Alone",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 25
-    },
-    {
-      "title": "Wreck It Ralph",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 26
-    },
-    {
-      "title": "IT",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 27
-    },
-    {
-      "title": "Wreck It Ralph",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 28
-    },
-    {
-      "title": "Intersteller",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 29
-    },
-    {
-      "title": "Home Alone",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 30
-    },
-    {
-      "title": "hey",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 31
-    },
-    {
-      "title": "That Darn Cat",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 32
-    },
-    {
-      "title": "PowerPuff Girls",
-      "rating": "1",
-      "genre": "comedy",
-      "id": 33
-    },
-    {
-      "title": "George of the Jungle",
+      "title": "The Shining",
       "rating": "3",
-      "genre": "romance",
-      "id": 36
+      "genre": "Horror",
+      "id": 9
     }
   ]
 }
