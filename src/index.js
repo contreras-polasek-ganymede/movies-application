@@ -12,7 +12,7 @@ getMovies().then((movies) => {
     console.log(error);
 });
 
-//=========Render Movie List===============================
+//=========Render Movies List===============================
 function renderMovies(movies) {
     let html = '';
     movies.forEach(({title, rating, genre, id}) => {
