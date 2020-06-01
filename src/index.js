@@ -34,9 +34,9 @@ function capitalizeFirstLetter(str) {
 function newMovieObject() {
     let title = capitalizeFirstLetter($('.title').val());
     return {
-        'title': title,
-        'rating': $('#movieRating').val(),
-        'genre': $('#movieGenre').val()
+        title: title,
+        rating: $('#movieRating').val(),
+        genre: $('#movieGenre').val()
     };
 }
 
@@ -66,10 +66,10 @@ $("#movieList").on('click', 'ul', function (e) {
 function movieObject() {
     let title = capitalizeFirstLetter($('#renderTitle').val());
     return {
-        'title': title,
-        'rating': $('#renderRating').val(),
-        'genre': $('#renderGenre').val(),
-        'id': movieArr[3]
+        title: title,
+        rating: $('#renderRating').val(),
+        genre: $('#renderGenre').val(),
+        id: movieArr[3]
     }
 }
 
