@@ -133,7 +133,15 @@ $('#mainEditBtn').click(function () {
 
 
 
-
+// function doubleSpace() {
+//     if ($('#myForm').includes('  ') === true) {
+//         $('.title').addClass('error');
+//         $('#addMovieBtn').prop('disabled', true);
+//     } else {
+//         $('.title').removeClass('error');
+//         $('#addMovieBtn').prop('disabled', false);
+//     }
+// }
 
 
 
@@ -165,16 +173,6 @@ $('#mainEditBtn').click(function () {
 //         }
 //     });
 // });
-
-// function doubleSpace() {
-//     if ($('#myForm').includes('  ') === true) {
-//         $('.title').addClass('error');
-//         $('#addMovieBtn').prop('disabled', true);
-//     } else {
-//         $('.title').removeClass('error');
-//         $('#addMovieBtn').prop('disabled', false);
-//     }
-// }
 
 //==================Import Requires
 // const {renderList} = require('./moviesList');
