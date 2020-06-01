@@ -9,9 +9,9 @@
 <body>
 
 <div class="container">
-    <h1>Reel Star!</h1>
+    <h1>&#127902; &#127909; Reel Stars! &#127871; &#127902;</h1>
 
-    <div class="row mb-3">
+    <div class="row mb-5">
         <button id="mainAddBtn" type="submit" class="mr-3 mt-1 mainBtn col-4">Add Movie</button>
         <button id="mainEditBtn" type="submit" class="ml-3 mt-1 mainBtn col-4">Edit Movie</button>
     </div>
@@ -30,13 +30,16 @@
     <!--            </div>-->
     <!--        </div>-->
     <hr>
-    <div class="row m-0">
-        <h4 class="mt-2">Movies</h4>
-    </div>
-    <div class="row m-0">
-        <p><em>(scroll to view movies)</em></p>
+
+    <div class="row m-0" id="movieListTitle">
+        <h4 class="mt-2 col-6">Movies</h4>
+        <div class="col-6 hideRow hide"></div>
     </div>
 
+    <div class="row m-0" id="scrollParagraph">
+        <p class="mb-3 col-6"><em>(scroll to view movies)</em></p>
+        <div class="col-6 hideRow hide"></div>
+    </div>
     <main class="row m-0">
         <div class="movieContainer col-6 mt-3">
             <div class="col-11" id="movieList"><img class="col-12 ml-3" id="loadingPic" src="img/popcornLoading.gif"
@@ -82,15 +85,13 @@
             </form>
         </div>
 
-        <!--            <hr>-->
-
-        <!--    starting edit form -->
+        <!--    =======================starting edit form ==================================-->
         <div class="editForm formContainer col-6" id="editForm">
             <form id="myEditForm">
                 <h5>Select Movie to Edit</h5>
                 <hr>
                 <div class="form-group mt-2">
-                    <label for="renderTitle">Edit Movies Title</label>
+                    <label for="renderTitle">Edit Movie Title</label>
                     <input type="text" class="form-control" id="renderTitle" placeholder="Edit movie title">
                 </div>
                 <div class="form-group">
@@ -124,13 +125,11 @@
             </form>
             <!--            end of form container-->
         </div>
-
         <!--            end of form container-->
     </main>
 </div>
 
-<!--        end of container div-->
-<!--    </div>-->
+
 <!--    Bootstrap links-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

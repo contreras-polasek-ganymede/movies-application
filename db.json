@@ -2,7 +2,7 @@
   "movies": [
     {
       "title": "Casablanca",
-      "rating": "3",
+      "rating": "4",
       "genre": "Romance",
       "id": 1
     },
@@ -35,6 +35,18 @@
       "rating": "2",
       "genre": "Comedy",
       "id": 7
+    },
+    {
+      "title": "Finding Nemo",
+      "rating": "4",
+      "genre": "Animated",
+      "id": 8
+    },
+    {
+      "title": "The Shining",
+      "rating": "3",
+      "genre": "Horror",
+      "id": 9
     }
   ]
 }

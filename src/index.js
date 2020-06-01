@@ -2,16 +2,6 @@ const {getMovies} = require('./api.js');
 const {addMovie} = require('./api.js');
 const {editMovie} = require('./api.js');
 const {deleteMovie} = require('./api.js');
-// const {renderList} = require('./moviesList');
-// const {createNewMovie} = require('./post.js');
-// const{editExistingMovie} = require('./put.js');
-// const{deleteSelectedMovie} = require('./delete.js');
-//
-// renderList.movieList();
-// createNewMovie.createMovie();
-// editExistingMovie.clickMovie();
-// editExistingMovie.updateMovie();
-// deleteSelectedMovie();
 
 
 getMovies().then((movies) => {
@@ -27,51 +17,15 @@ function renderMovies(movies) {
     let html = '';
     movies.forEach(({title, rating, genre, id}) => {
         html += `<ul>
-<li><span id="title">${title}</span>  <br><span id="rating">Rating: ${rating}</span>  <br><span id="genre">Genre: ${genre}</span>  <br><span style ="display: none;" id='id'>${id}</span></li><hr><hr>
+<li><span id="title">${title}</span>  
+<br><span id="rating">Rating: ${rating}</span>  
+<br><span id="genre">Genre: ${genre}</span>  
+<br><span style ="display: none;" id='id'>${id}</span></li><hr><hr>
     </ul>`;
     });
     $('#movieList').html(html);
 }
 
-//======Sort=========================================
-// $('#sortBtn').click(function (e) {
-//     e.preventDefault();
-//     let sortValue = $('#sort').val();
-//     console.log(sortValue);
-//     // $(movies).forEach(function() {
-//         if (sortValue === 'title') {
-//             $('#title').removeClass('hide');
-//             $('#rating').addClass('hide');
-//             $('#genre').addClass('hide');
-//         } else if (sortValue === 'rating') {
-//             $('#rating').removeClass('hide');
-//             $('#title').addClass('hide');
-//             $('#genre').addClass('hide');
-//         } else if (sortValue === 'genre') {
-//             $('#genre').removeClass('hide');
-//             $('#title').addClass('hide');
-//             $('#rating').addClass('hide');
-//         } else if (sortValue === 'show all') {
-//             $('#title').removeClass('hide');
-//             $('#rating').removeClass('hide');
-//             $('#genre').removeClass('hide')
-//         } else {
-//             renderMovies();
-//         }
-//     });
-// });
-
-
-
-// function doubleSpace() {
-//     if ($('#myForm').includes('  ') === true) {
-//         $('.title').addClass('error');
-//         $('#addMovieBtn').prop('disabled', true);
-//     } else {
-//         $('.title').removeClass('error');
-//         $('#addMovieBtn').prop('disabled', false);
-//     }
-// }
 function capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
@@ -148,9 +102,11 @@ $('#mainAddBtn').click(function () {
     $('.addForm').removeClass('hide');
     $('#addForm').addClass('border-left');
     $('.editForm').addClass('hide');
-    $('.row').removeClass('center');
     $('#mainAddBtn').addClass('colorBtn');
     $('#mainEditBtn').removeClass('colorBtn');
+    $("#movieListTitle").addClass('left');
+    $("#scrollParagraph").addClass('left');
+    $('.hideRow').removeClass('hide');
 });
 
 $('#mainEditBtn').click(function () {
@@ -159,7 +115,78 @@ $('#mainEditBtn').click(function () {
     $('.addForm').addClass('hide');
     $('#mainEditBtn').addClass('colorBtn');
     $('#mainAddBtn').removeClass('colorBtn');
+    $("#movieListTitle").addClass('left');
+    $("#scrollParagraph").addClass('left');
+    $('.hideRow').removeClass('hide');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//======Sort=========================================
+// $('#sortBtn').click(function (e) {
+//     e.preventDefault();
+//     let sortValue = $('#sort').val();
+//     console.log(sortValue);
+//     // $(movies).forEach(function() {
+//         if (sortValue === 'title') {
+//             $('#title').removeClass('hide');
+//             $('#rating').addClass('hide');
+//             $('#genre').addClass('hide');
+//         } else if (sortValue === 'rating') {
+//             $('#rating').removeClass('hide');
+//             $('#title').addClass('hide');
+//             $('#genre').addClass('hide');
+//         } else if (sortValue === 'genre') {
+//             $('#genre').removeClass('hide');
+//             $('#title').addClass('hide');
+//             $('#rating').addClass('hide');
+//         } else if (sortValue === 'show all') {
+//             $('#title').removeClass('hide');
+//             $('#rating').removeClass('hide');
+//             $('#genre').removeClass('hide')
+//         } else {
+//             renderMovies();
+//         }
+//     });
+// });
+
+// function doubleSpace() {
+//     if ($('#myForm').includes('  ') === true) {
+//         $('.title').addClass('error');
+//         $('#addMovieBtn').prop('disabled', true);
+//     } else {
+//         $('.title').removeClass('error');
+//         $('#addMovieBtn').prop('disabled', false);
+//     }
+// }
+
+//==================Import Requires
+// const {renderList} = require('./moviesList');
+// const {createNewMovie} = require('./post.js');
+// const{editExistingMovie} = require('./put.js');
+// const{deleteSelectedMovie} = require('./delete.js');
+//
+// renderList.movieList();
+// createNewMovie.createMovie();
+// editExistingMovie.clickMovie();
+// editExistingMovie.updateMovie();
+// deleteSelectedMovie();
 
 
 
